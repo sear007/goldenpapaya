@@ -13,7 +13,7 @@ $contact_us_instagram = get_theme_mod( 'contact_us_instagram', '');
 <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
             <div class="container pb-5">
                 <div class="row g-5">
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-3">
                         <div class="bg-primary rounded p-4">
                             <a href="index.html"><h3 class="text-white text-uppercase mb-3">Golden Papaya</h3></a>
                             <p class="text-white mb-0">
@@ -21,11 +21,11 @@ $contact_us_instagram = get_theme_mod( 'contact_us_instagram', '');
 							</p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-6 col-lg-5">
                         <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i><span style="font-size: 12px"><?php echo $address; ?></span></p>
                         <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><?php echo $phone; ?></p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i><span style="font-size:12px"><?php echo $email; ?></span></p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i><span ><?php echo $email; ?></span></p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i><span ><?php echo $address; ?></span></p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href="<?php echo $contact_us_twitter; ?>"><i class="fab fa-twitter"></i></a>
                             <a class="btn btn-outline-light btn-social" href="<?php echo $contact_us_facebook; ?>"><i class="fab fa-facebook-f"></i></a>
@@ -33,7 +33,7 @@ $contact_us_instagram = get_theme_mod( 'contact_us_instagram', '');
                             <a class="btn btn-outline-light btn-social" href="<?php echo $contact_us_linkedin; ?>"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-5 col-md-12">
+                    <div class="col-lg-4 col-md-12">
                         <div class="row gy-5 g-2">
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
