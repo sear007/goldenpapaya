@@ -62,7 +62,7 @@
                                 <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="<?php echo $img02; ?>" style="height: 100%">
                             </div>
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="<?php echo $img03; ?>" style="height: 100%">
+                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="<?php echo $img03; ?>">
                             </div>
                             <div class="col-6 text-start">
                                 <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="<?php echo $img04; ?>" style="height: 100%">
