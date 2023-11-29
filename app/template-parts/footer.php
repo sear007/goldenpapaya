@@ -38,23 +38,23 @@ $contact_us_instagram = get_theme_mod( 'contact_us_instagram', '');
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
                                 <?php
-                                    $footer_menu_args = array(
-                                        'theme_location' => 'footer',
-                                        'container' => false,
-                                    );
-                                    $footer_menu = wp_nav_menu($footer_menu_args);
-
+                                    // $footer_menu_args = array(
+                                    //     'theme_location' => 'footer',
+                                    //     'container' => false,
+                                    // );
+                                    // $footer_menu = wp_nav_menu($footer_menu_args);
+                                    $menu_items = wp_get_nav_menu_items('footer');
+                                    print_r($menu_items)
                                     // Process the menu items if the menu exists
-                                    if ($footer_menu) {
+                                    // if ($footer_menu) {
                                     // Get the individual menu items
-                                        $menu_items = wp_get_nav_menu_items('footer');
-                                        print_r($menu_items)
+                                       
                                         // Iterate through each menu item
                                         // foreach ($menu_items as $menu_item) {
                                         // // Display the menu item in the desired format
                                         // echo '<a class="btn btn-link" href="' . $menu_item->url . '">' . $menu_item->title . '</a>';
                                         // }
-                                    }
+                                    // }
                                 ?>
                             </div>
                         </div>
