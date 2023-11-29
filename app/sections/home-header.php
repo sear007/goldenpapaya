@@ -1,3 +1,12 @@
+<?php
+$email = get_theme_mod( 'contact_us_email', '');
+$phone = get_theme_mod( 'contact_us_phone', '');
+$contact_us_twitter = get_theme_mod( 'contact_us_twitter', '');
+$contact_us_facebook = get_theme_mod( 'contact_us_facebook', '');
+$contact_us_youtube = get_theme_mod( 'contact_us_youtube', '');
+$contact_us_linkedin = get_theme_mod( 'contact_us_linkedin', '');
+$contact_us_instagram = get_theme_mod( 'contact_us_instagram', '');
+?>
 <div class="container-fluid bg-dark px-0">
     <div class="row gx-0">
         <div class="col-lg-3 bg-dark d-none d-lg-block">
@@ -10,25 +19,25 @@
                 <div class="col-lg-7 px-5 text-start">
                     <div class="h-100 d-inline-flex align-items-center py-2 me-4">
                         <i class="fa fa-envelope text-primary me-2"></i>
-                        <p class="mb-0">info@example.com</p>
+                        <p class="mb-0"><?php echo $email; ?></p>
                     </div>
                     <div class="h-100 d-inline-flex align-items-center py-2">
                         <i class="fa fa-phone-alt text-primary me-2"></i>
-                        <p class="mb-0">+012 345 6789</p>
+                        <p class="mb-0"><?php echo $phone; ?></p>
                     </div>
                 </div>
                 <div class="col-lg-5 px-5 text-end">
                     <div class="d-inline-flex align-items-center py-2">
-                        <a class="me-3" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="me-3" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="me-3" href=""><i class="fab fa-linkedin-in"></i></a>
-                        <a class="me-3" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="me-3" href="<?php echo $contact_us_facebook; ?>"><i class="fab fa-facebook-f"></i></a>
+                        <a class="me-3" href="<?php echo $contact_us_twitter; ?>"><i class="fab fa-twitter"></i></a>
+                        <a class="me-3" href="<?php echo $contact_us_linkedin; ?>"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="me-3" href="<?php echo $contact_us_instagram; ?>"><i class="fab fa-instagram"></i></a>
+                        <a class="" href="<?php echo $contact_us_youtube; ?>"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
             <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
-                <a href="index.html" class="navbar-brand d-block d-lg-none">
+                <a href="/" class="navbar-brand d-block d-lg-none">
                     <h3 class="m-0 text-primary text-uppercase">Golden Papaya</h3>
                 </a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">

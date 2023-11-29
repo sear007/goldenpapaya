@@ -1,6 +1,14 @@
 <!-- Footer Start -->
 <?php
 $short_description = get_theme_mod( 'about_us_short_description', 'short description');
+$email = get_theme_mod( 'contact_us_email', '');
+$phone = get_theme_mod( 'contact_us_phone', '');
+$address = get_theme_mod( 'contact_us_address', '');
+$contact_us_twitter = get_theme_mod( 'contact_us_twitter', '');
+$contact_us_facebook = get_theme_mod( 'contact_us_facebook', '');
+$contact_us_youtube = get_theme_mod( 'contact_us_youtube', '');
+$contact_us_linkedin = get_theme_mod( 'contact_us_linkedin', '');
+$contact_us_instagram = get_theme_mod( 'contact_us_instagram', '');
 ?>
 <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
             <div class="container pb-5">
@@ -15,25 +23,40 @@ $short_description = get_theme_mod( 'about_us_short_description', 'short descrip
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i><?php echo $address; ?></p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><?php echo $address; ?></p>
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i><?php echo $email; ?></p>
                         <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="<?php echo $contact_us_twitter; ?>"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="<?php echo $contact_us_facebook; ?>"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="<?php echo $contact_us_youtube; ?>"><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="<?php echo $contact_us_linkedin; ?>"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-12">
                         <div class="row gy-5 g-4">
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
-                                <a class="btn btn-link" href="">About Us</a>
-                                <a class="btn btn-link" href="">Contact Us</a>
-                                <a class="btn btn-link" href="">Privacy Policy</a>
-                                <a class="btn btn-link" href="">Terms & Condition</a>
-                                <a class="btn btn-link" href="">Support</a>
+                                <?php
+                                    $footer_menu_args = array(
+                                    'theme_location' => 'footer_menu',
+                                    'container' => false,
+                                    'echo' => false, // Set 'echo' to false to capture the menu instead of displaying it immediately
+                                    );
+                                    $footer_menu = wp_nav_menu($footer_menu_args);
+
+                                    // Process the menu items if the menu exists
+                                    if ($footer_menu) {
+                                    // Get the individual menu items
+                                    $menu_items = wp_get_nav_menu_items('footer_menu');
+
+                                    // Iterate through each menu item
+                                    foreach ($menu_items as $menu_item) {
+                                    // Display the menu item in the desired format
+                                    echo '<a class="btn btn-link" href="' . $menu_item->url . '">' . $menu_item->title . '</a>';
+                                    }
+                                    }
+                                ?>
                             </div>
                         </div>
                     </div>
