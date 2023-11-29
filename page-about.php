@@ -8,5 +8,5 @@ get_template_part('app/sections/page', 'header', array(
     'link' => 'about',
 ));
 get_template_part('app/sections/home', 'about');
-get_template_part('app/sections/home', 'team');
+// get_template_part('app/sections/home', 'team');
 get_footer();
