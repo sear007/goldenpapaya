@@ -39,7 +39,7 @@ $contact_us_instagram = get_theme_mod( 'contact_us_instagram', '');
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
                                 <?php
                                     $footer_menu_args = array(
-                                    'theme_location' => 'footer_menu',
+                                    'theme_location' => 'footer',
                                     'container' => false,
                                     'echo' => false, // Set 'echo' to false to capture the menu instead of displaying it immediately
                                     );
@@ -48,7 +48,7 @@ $contact_us_instagram = get_theme_mod( 'contact_us_instagram', '');
                                     // Process the menu items if the menu exists
                                     if ($footer_menu) {
                                     // Get the individual menu items
-                                    $menu_items = wp_get_nav_menu_items('footer_menu');
+                                    $menu_items = wp_get_nav_menu_items('footer');
 
                                     // Iterate through each menu item
                                     foreach ($menu_items as $menu_item) {
