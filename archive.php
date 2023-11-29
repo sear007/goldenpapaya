@@ -7,7 +7,7 @@ if (have_posts()) {
         get_template_part('app/sections/home', 'room', array('title' => get_the_title()));
     }
 } else {
-    echo '<p>No posts found.</p>';
+    echo '<p class="p-2 mt-5 mb-5">No posts found.</p>';
 }
 
 get_footer(); // Include the footer template
