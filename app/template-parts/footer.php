@@ -37,25 +37,27 @@ $contact_us_instagram = get_theme_mod( 'contact_us_instagram', '');
                         <div class="row gy-5 g-2">
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
-                                <?php
-                                    // $footer_menu_args = array(
-                                    //     'theme_location' => 'footer',
-                                    //     'container' => false,
-                                    // );
-                                    // $footer_menu = wp_nav_menu($footer_menu_args);
-                                    $menu_items = wp_get_nav_menu_items('footer');
-                                    print_r($menu_items)
+                                
+                                    <?php
+                                    $footer_menu_args = array(
+                                        'theme_location' => 'footer',
+                                        'container' => false,
+                                        'echo' => false, // Set 'echo' to false to capture the menu instead of displaying it immediately
+                                    );
+                                    $footer_menu = wp_nav_menu($footer_menu_args);
+
                                     // Process the menu items if the menu exists
-                                    // if ($footer_menu) {
-                                    // Get the individual menu items
-                                       
+                                    if ($footer_menu) {
+                                        // Use regular expression to extract the individual menu items
+                                        preg_match_all('/<a.*?href="(.*?)".*?>(.*?)<\/a>/', $footer_menu, $matches, PREG_SET_ORDER);
+
                                         // Iterate through each menu item
-                                        // foreach ($menu_items as $menu_item) {
-                                        // // Display the menu item in the desired format
-                                        // echo '<a class="btn btn-link" href="' . $menu_item->url . '">' . $menu_item->title . '</a>';
-                                        // }
-                                    // }
-                                ?>
+                                        foreach ($matches as $match) {
+                                            // Display the menu item in the desired format
+                                            echo '<a class="btn btn-link" href="' . $match[1] . '">' . $match[2] . '</a>';
+                                        }
+                                    }
+                                    ?>
                             </div>
                         </div>
                     </div>
