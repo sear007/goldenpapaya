@@ -72,7 +72,7 @@ function custom_services_customizer_section($wp_customize) {
         'sanitize_callback' => 'sanitize_textarea_field',
     ));
 
-    $wp_customize->add_control('service_free_parking_escription', array(
+    $wp_customize->add_control('service_free_parking_description', array(
         'label' => __('Description', 'text-domain'),
         'section' => 'service_free_parking',
         'settings' => 'service_free_parking_description',
