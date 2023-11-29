@@ -23,8 +23,8 @@ $contact_us_instagram = get_theme_mod( 'contact_us_instagram', '');
                     </div>
                     <div class="col-md-6 col-lg-3">
                         <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
-                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i><?php echo $address; ?></p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><?php echo $address; ?></p>
+                        <p class="mb-2"><i class="fa fa-map-marker-alt me-3 small"></i><?php echo $address; ?></p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><?php echo $phone; ?></p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i><?php echo $email; ?></p>
                         <div class="d-flex pt-2">
                             <a class="btn btn-outline-light btn-social" href="<?php echo $contact_us_twitter; ?>"><i class="fab fa-twitter"></i></a>
@@ -34,7 +34,7 @@ $contact_us_instagram = get_theme_mod( 'contact_us_instagram', '');
                         </div>
                     </div>
                     <div class="col-lg-5 col-md-12">
-                        <div class="row gy-5 g-4">
+                        <div class="row gy-5 g-2">
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
                                 <?php
