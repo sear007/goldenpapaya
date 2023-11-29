@@ -39,9 +39,8 @@ $contact_us_instagram = get_theme_mod( 'contact_us_instagram', '');
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
                                 <?php
                                     $footer_menu_args = array(
-                                    'theme_location' => 'footer',
-                                    'container' => false,
-                                    'echo' => false, // Set 'echo' to false to capture the menu instead of displaying it immediately
+                                        'theme_location' => 'footer',
+                                        'container' => false,
                                     );
                                     $footer_menu = wp_nav_menu($footer_menu_args);
 
