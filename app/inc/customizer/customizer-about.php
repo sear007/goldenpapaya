@@ -127,7 +127,7 @@ function custom_about_us_customizer_section($wp_customize) {
     ));
 
     $wp_customize->add_control('about_us_count_staff_control', array(
-        'label' => __('Staffs', 'text-domain'),
+        'label' => __('Floor', 'text-domain'),
         'section' => 'about_us_count_section',
         'settings' => 'about_us_count_staff',
         'type' => 'text',
@@ -139,7 +139,7 @@ function custom_about_us_customizer_section($wp_customize) {
     ));
 
     $wp_customize->add_control('about_us_count_client_control', array(
-        'label' => __('Clients', 'text-domain'),
+        'label' => __('Year', 'text-domain'),
         'section' => 'about_us_count_section',
         'settings' => 'about_us_count_client',
         'type' => 'text',

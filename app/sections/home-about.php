@@ -22,7 +22,7 @@
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-hotel fa-2x text-primary mb-2"></i>
                                         <h2 class="mb-1" data-toggle="counter-up"><?php echo $count_room; ?></h2>
-                                        <p class="mb-0">Rooms</p>
+                                        <p class="mb-0 small">Number of rooms</p>
                                     </div>
                                 </div>
                             </div>
@@ -31,7 +31,7 @@
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users-cog fa-2x text-primary mb-2"></i>
                                         <h2 class="mb-1" data-toggle="counter-up"><?php echo $count_staff; ?></h2>
-                                        <p class="mb-0">Staffs</p>
+                                        <p class="mb-0 small">Number of floors</p>
                                     </div>
                                 </div>
                             </div>
@@ -40,7 +40,7 @@
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users fa-2x text-primary mb-2"></i>
                                         <h2 class="mb-1" data-toggle="counter-up"><?php echo $count_client; ?></h2>
-                                        <p class="mb-0">Clients</p>
+                                        <p class="mb-0 small">Year property opened</p>
                                     </div>
                                 </div>
                             </div>
