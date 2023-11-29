@@ -20,7 +20,7 @@
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
-                                        <i class="fa fa-hotel fa-2x text-primary mb-2"></i>
+                                        <i class="fa fa-bed fa-2x text-primary mb-2"></i>
                                         <h2 class="mb-1" data-toggle="counter-up"><?php echo $count_room; ?></h2>
                                         <p class="mb-0" style="font-size: 10px">Number of rooms</p>
                                     </div>
@@ -29,7 +29,7 @@
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.3s">
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
-                                        <i class="fa fa-users-cog fa-2x text-primary mb-2"></i>
+                                        <i class="fa fa-hotel fa-2x text-primary mb-2"></i>
                                         <h2 class="mb-1" data-toggle="counter-up"><?php echo $count_staff; ?></h2>
                                         <p class="mb-0 small" style="font-size: 10px">Number of floors</p>
                                     </div>
@@ -38,7 +38,7 @@
                             <div class="col-sm-4 wow fadeIn" data-wow-delay="0.5s">
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
-                                        <i class="fa fa-users fa-2x text-primary mb-2"></i>
+                                        <i class="fa fa-star fa-2x text-primary mb-2"></i>
                                         <h2 class="mb-1" data-toggle="counter-up"><?php echo $count_client; ?></h2>
                                         <p class="mb-0 small" style="font-size: 10px">Year property opened</p>
                                     </div>
