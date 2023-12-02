@@ -35,7 +35,7 @@ function display_room_features_meta_box($post) {
             <div>
                 <label>
                     <input type="checkbox" name="allow_smooking" <?php checked($allow_smooking, 'on'); ?> />
-                    Allow Smooking
+                    Non-smoking
                 </label>
             </div>
             <div>

@@ -1,7 +1,17 @@
 <?php
 $title = get_theme_mod('watch_title','Discover A Brand Luxurious Hotel');
 $des = get_theme_mod('watch_description','Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet');
-$url_youtube = get_theme_mod('watch_url','');
+$url_youtube = get_theme_mod('watch_url', 'https://www.youtube.com/watch?v=fj4IzuLYoH8&pp=ygURSG90ZWwgZ29vZCBwbGFjZXM%3D');
+
+function getVideoId($link = "https://www.youtube.com/watch?v=fj4IzuLYoH8&pp=ygURSG90ZWwgZ29vZCBwbGFjZXM%3D") {
+    preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $link, $match);
+    $youtube_id = $match[1];
+    
+    return $youtube_id; // Return the extracted video ID
+}
+
+$video_id = getVideoId($url_youtube);
+echo $video_id; // Output: fj4IzuLYoH8
 ?>
 <div class="container-xxl py-5 px-0 wow zoomIn" data-wow-delay="0.1s">
             <div class="row g-0">
@@ -21,7 +31,7 @@ $url_youtube = get_theme_mod('watch_url','');
                 </div>
                 <div class="col-md-6">
                     <div class="video">
-                        <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                        <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/<?php echo $video_id;?>" data-bs-target="#videoModal">
                             <span></span>
                         </button>
                     </div>
@@ -39,8 +49,15 @@ $url_youtube = get_theme_mod('watch_url','');
                     <div class="modal-body">
                         <!-- 16:9 aspect ratio -->
                         <div class="ratio ratio-16x9">
-                            <iframe class="embed-responsive-item" src="<?php echo $url_youtube; ?>" id="video" allowfullscreen allowscriptaccess="always"
-                                allow="autoplay"></iframe>
+                            <iframe 
+                                class="embed-responsive-item" 
+                                src="https://www.youtube.com/embed/<?php echo $video_id;?>" 
+                                id="video" 
+                                allowfullscreen 
+                                allowscriptaccess="always"
+                                allow="autoplay"
+                            >
+                            </iframe>
                         </div>
                     </div>
                 </div>

@@ -20,13 +20,19 @@ if ($room_query->have_posts()) {
         $room_id = get_the_ID();
         $room_title = get_the_title();
         $room_name = get_post_meta($room_id, 'room_name', true);
+        $room_size = get_post_meta($room_id, 'room_size', true);
         $room_price = get_post_meta($room_id, 'room_price', true);
         $room_image = get_the_post_thumbnail_url($room_id, 'full');
         $bed_count = get_post_meta($room_id, 'bed_room', true);
         $room_shower = get_post_meta($room_id, 'room_shower', true);
+        $allow_smooking = get_post_meta($room_id, 'allow_smooking', true);
         $free_wifi = get_post_meta($room_id, 'free_wifi', true);
-        $free_wifi = get_post_meta($room_id, 'free_wifi', true);
+        $air_conditioning = get_post_meta($post->ID, 'air_conditioning', true);
+        $television = get_post_meta($post->ID, 'television', true);
+        $fan = get_post_meta($post->ID, 'fan', true);
         $gallery_images = get_post_meta($post->ID, 'room_gallery_images', true);
+        $free_water = get_post_meta($post->ID, 'free_water', true);
+        $none_styles = "text-decoration-line: line-through; color: #ccc";
         wp_nonce_field('room_gallery_nonce', 'room_gallery_nonce');
 ?>
 
@@ -98,27 +104,28 @@ if ($room_query->have_posts()) {
                                 <p class="text-primary m-0 p-0 h5"><?php echo $room_price; ?> USD</p>
                                 <h6 class="text-muted small"><?php echo $room_name; ?></h6>
                             </div>
-                            <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-phone-alt"></i> Booking</a>
+                            <a href="tel:<?php echo get_theme_mod( 'contact_us_phone', '+85512345678'); ?>" class="btn btn-primary btn-sm"><i class="fa fa-phone-alt"></i> Booking</a>
                         </div>
                     </div>
                 </div>
                 <hr>
                 <div class="wow fadeInUp" data-wow-delay="0.2s">
                     <h5 class="text-primary">Features</h5>
-                    <p class="p-0 m-0"><i class="icon-blueprint"></i><small> Room size: 18 m²/194 ft²</small></p>
-                    <p class="p-0 m-0"><i class="icon-no-smoking"></i><small> Non-smoking</small></p>
-                    <p class="p-0 m-0"><i class="icon-air-conditioning"></i><small> Air conditioning</small></p>
+                    <p class="p-0 m-0"><i class="icon-blueprint"></i><small> Room size: <?php echo $room_size; ?></small></p>
+                    <p class="p-0 m-0" style="<?php echo $allow_smooking !== "on" ? $none_styles : ''?>"><i class="icon-no-smoking"></i><small> Non-smoking</small></p>
+                    <p class="p-0 m-0" style="<?php echo $air_conditioning !== "on" ? $none_styles : ''?>"><i class="icon-air-conditioning"></i><small> Air conditioning</small></p>
+                    <p class="p-0 m-0"><i class="fa fa-bed" style="font-size: 12px; margin-left: 5px; margin-right: 3px"></i><small> Bed count: <?php echo $bed_count; ?></small></p>
                     <p></p>
                     <h5 class="text-primary">Entertainment</h5>
-                    <p class="p-0 m-0"><i class="icon-watch-tv"></i><small> Satellite/cable channels</small></p>
-                    <p class="p-0 m-0"><i class="icon-wifi"></i><small> Free Wi-Fi</small></p>
+                    <p class="p-0 m-0" style="<?php echo $television !== "on" ? $none_styles : ''?>"><i class="icon-watch-tv"></i><small> Satellite/cable channels</small></p>
+                    <p class="p-0 m-0" style="<?php echo $free_wifi !== "on" ? $none_styles : ''?>"><i class="icon-wifi"></i><small> Free Wi-Fi</small></p>
                     <p></p>
                     <h5 class="text-primary">Comforts</h5>
-                    <p class="p-0 m-0"><i class="icon-fan"></i><small> Fan</small></p>
-                    <p class="p-0 m-0"><i class="icon-shower"></i><small> Shower</small></p>
+                    <p class="p-0 m-0" style="<?php echo $fan !== "on" ? $none_styles : ''?>"><i class="icon-fan"></i><small> Fan</small></p>
+                    <p class="p-0 m-0" style="<?php echo $room_shower !== "on" ? $none_styles : ''?>"><i class="icon-shower"></i><small> Shower</small></p>
                     <p></p>
                     <h6 class="text-primary">Dining, drinking, and snacking</h6>
-                    <p class="p-0 m-0"><i class="icon-water"></i><small> Free Water</small></p>
+                    <p class="p-0 m-0" style="<?php echo $free_water !== "on" ? $none_styles : ''?>"><i class="icon-water"></i><small> Free bottled water</small></p>
                     <p></p>
                 </div>
             </div>
