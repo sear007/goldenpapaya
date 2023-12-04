@@ -11,7 +11,6 @@ function getVideoId($link = "https://www.youtube.com/watch?v=fj4IzuLYoH8&pp=ygUR
 }
 
 $video_id = getVideoId($url_youtube);
-echo $video_id; // Output: fj4IzuLYoH8
 ?>
 <div class="container-xxl py-5 px-0 wow zoomIn" data-wow-delay="0.1s">
             <div class="row g-0">
