@@ -9,7 +9,7 @@
                 <div class="row gy-4">
                     <div class="col-md-4">
                         <h6 class="section-title text-start text-primary text-uppercase d-block">Booking</h6>
-                        <a class="btn btn-primary" href="mail:<?php echo get_theme_mod( 'contact_us_email', 'your_mail@example.com' ) ?>"><i class="fa fa-envelope-open text-white me-2"></i><?php echo get_theme_mod( 'contact_us_email', 'N/A' ) ?></a>
+                        <p><?php echo get_theme_mod( 'contact_us_email', 'your_mail@example.com' ) ?></p>
                     </div>
                 </div>
             </div>
