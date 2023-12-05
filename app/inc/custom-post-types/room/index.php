@@ -23,7 +23,7 @@ function create_rooms_post_type() {
         'public' => true,
         'has_archive' => true,
         'rewrite' => array('slug' => 'rooms'),
-        'supports' => array('title', 'thumbnail'),
+        'supports' => array('title', 'editor', 'thumbnail'),
         'taxonomies' => array('room_type'),
     );
 
