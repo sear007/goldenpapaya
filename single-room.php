@@ -6,17 +6,8 @@ Template Name: Room Posts Template
 get_header(); // Include the header template
 $directory = get_template_directory(  ).'/app/inc/custom-post-types/room/';
 require_once $directory.'amenities_and_facilities_items.php';
-// Custom query to retrieve room posts
-$args = array(
-    'post_type' => 'room',
-    'posts_per_page' => 10, // Number of room posts to display
-);
-$room_query = new WP_Query($args);
-
-// Check if there are any room posts
-if ($room_query->have_posts()) {
-    while ($room_query->have_posts()) {
-        $room_query->the_post();
+    while (have_posts()) {
+        the_post();
         $room_id = get_the_ID();
         $room_title = get_the_title();
         $room_name = get_post_meta($room_id, 'room_name', true);
@@ -169,10 +160,6 @@ if ($room_query->have_posts()) {
 <?php
     }
 
-    // Restore original post data
-    wp_reset_postdata();
-} else {
-    echo 'No room posts found.';
-}
 
 get_footer(); // Include the footer template
+?>
