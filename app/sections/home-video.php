@@ -1,5 +1,6 @@
 <?php
 $title = get_theme_mod('watch_title','Discover A Brand Luxurious Hotel');
+$watch_title_sub = get_theme_mod('watch_title_sub','LUXURY LIVING');
 $des = get_theme_mod('watch_description','Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet');
 $url_youtube = get_theme_mod('watch_url', 'https://www.youtube.com/watch?v=fj4IzuLYoH8&pp=ygURSG90ZWwgZ29vZCBwbGFjZXM%3D');
 $thumbnail = get_theme_mod('watch_image_settings', get_template_directory_uri(  ).'/app/assets/img/video.jpg');

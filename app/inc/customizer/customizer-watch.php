@@ -7,6 +7,11 @@ function theme_customizer_watch_settings($wp_customize) {
     ));
 
     // Title Setting
+    $wp_customize->add_setting('watch_title_sub', array(
+        'default' => 'LUXURY LIVING',
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+    
     $wp_customize->add_setting('watch_title', array(
         'default' => 'Discover A Brand Luxurious Hotel',
         'sanitize_callback' => 'sanitize_text_field',
@@ -32,6 +37,12 @@ function theme_customizer_watch_settings($wp_customize) {
     $wp_customize->add_control('watch_title', array(
         'label' => 'Watch Title',
         'section' => 'watch_section',
+        'type' => 'text',
+    ));
+    
+    $wp_customize->add_control('watch_title_sub_control', array(
+        'label' => 'Sub-Title',
+        'section' => 'watch_title_sub',
         'type' => 'text',
     ));
 
