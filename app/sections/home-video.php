@@ -29,7 +29,7 @@ $video_id = getVideoId($url_youtube);
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="video" style="background: linear-gradient(rgba(15, 23, 43, .1), rgba(15, 23, 43, .1)), url($thumbnail)">
+                    <div class="video" style="background: linear-gradient(rgba(15, 23, 43, .1), rgba(15, 23, 43, .1)), url(<?php echo $thumbnail;?>)">
                         <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/<?php echo $video_id;?>" data-bs-target="#videoModal">
                             <span></span>
                         </button>
