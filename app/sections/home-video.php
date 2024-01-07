@@ -2,7 +2,7 @@
 $title = get_theme_mod('watch_title','Discover A Brand Luxurious Hotel');
 $des = get_theme_mod('watch_description','Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet');
 $url_youtube = get_theme_mod('watch_url', 'https://www.youtube.com/watch?v=fj4IzuLYoH8&pp=ygURSG90ZWwgZ29vZCBwbGFjZXM%3D');
-
+$thumbnail = get_theme_mod('watch_image_settings', get_template_directory_uri(  ).'/app/assets/img/video.jpg');
 function getVideoId($link = "https://www.youtube.com/watch?v=fj4IzuLYoH8&pp=ygURSG90ZWwgZ29vZCBwbGFjZXM%3D") {
     preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $link, $match);
     $youtube_id = $match[1];
@@ -29,7 +29,7 @@ $video_id = getVideoId($url_youtube);
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="video">
+                    <div class="video" style="background: linear-gradient(rgba(15, 23, 43, .1), rgba(15, 23, 43, .1)), url($thumbnail)">
                         <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/<?php echo $video_id;?>" data-bs-target="#videoModal">
                             <span></span>
                         </button>
