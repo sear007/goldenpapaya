@@ -4,7 +4,7 @@ $items = '[
         "section_name": "Languages spoken",
         "items": [
             {"name": "KHMER", "key": "af_khmer", "icon": "<img width=\"24\" height=\"24\" src=\"https://img.icons8.com/color/48/cambodia.png\" alt=\"cambodia\" />"},
-            {"name": "ENGLISH", "key": "af_english", "icon": "<img width=\"24\" height=\"24\" src=\"https://img.icons8.com/color/48/cambodia.png\" alt=\"cambodia\" />"}
+            {"name": "ENGLISH", "key": "af_english", "icon": "<img width=\"24\" height=\"24\" src=\"https://img.icons8.com/emoji/48/united-kingdom-emoji.png\" alt=\"cambodia\" />"}
         ]
     },
     {
