@@ -17,7 +17,7 @@ $video_id = getVideoId($url_youtube);
             <div class="row g-0">
                 <div class="col-md-6 bg-dark d-flex align-items-center">
                     <div class="p-5">
-                        <h6 class="section-title text-start text-white text-uppercase mb-3">Luxury Living</h6>
+                        <h6 class="section-title text-start text-white text-uppercase mb-3"><?php echo $watch_title_sub; ?></h6>
                         <h1 class="text-white mb-4"><?php echo $title; ?></h1>
                         <p class="text-white mb-4"><?php echo $des; ?></p>
                         <?php
