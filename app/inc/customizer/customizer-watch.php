@@ -22,6 +22,11 @@ function theme_customizer_watch_settings($wp_customize) {
         'default' => '',
         'sanitize_callback' => 'sanitize_text_field',
     ));
+    
+    $wp_customize->add_setting('watch_image_settings', array(
+      'default' => '',
+      'sanitize_callback' => 'sanitize_text_field',
+  ));
 
     // Title Control
     $wp_customize->add_control('watch_title', array(
@@ -42,5 +47,16 @@ function theme_customizer_watch_settings($wp_customize) {
         'section' => 'watch_section',
         'type' => 'text',
     ));
+
+    $wp_customize->add_control(new WP_Customize_Image_Control(
+      $wp_customize,
+      'watch_image_controls',
+      array(
+          'label' => __('Youtube Thumbnail', 'text-domain'),
+          'description' => __('Select an image for youtube Thumbnail.', 'text-domain'),
+          'section' => 'watch_section',
+          'settings' => 'watch_image_settings',
+      )
+  ));
 }
 add_action('customize_register', 'theme_customizer_watch_settings');
