@@ -40,7 +40,7 @@ function theme_customizer_watch_settings($wp_customize) {
         'type' => 'text',
     ));
     
-    $wp_customize->add_control('watch_title_sub_control', array(
+    $wp_customize->add_control('watch_title_sub', array(
         'label' => 'Sub-Title',
         'section' => 'watch_section',
         'type' => 'text',
